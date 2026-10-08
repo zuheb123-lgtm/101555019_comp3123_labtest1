@@ -1,7 +1,6 @@
 // Question 2: Promises
-// Promise versions of delayedSuccess and delayedException from callbacks.js
 
-// Similar to delayedSuccess: resolves a message after 500ms
+//after 500ms, it resolves the message
 const resolvedPromise = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -11,7 +10,7 @@ const resolvedPromise = () => {
     });
 };
 
-// Similar to delayedException: rejects an error message after 500ms
+// after 500ms, rejects the message 
 const rejectedPromise = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -24,7 +23,7 @@ const rejectedPromise = () => {
     });
 };
 
-// Call both promises separately and handle resolve/reject results
+// Call both promises separately, handle resolve/reject results
 resolvedPromise()
     .then((result) => console.log(result))
     .catch((error) => console.error(error));

@@ -1,4 +1,4 @@
-// Question 3: File Module - Remove Log files
+// Question 3: File Module-Remove Log files
 const fs = require('fs');
 const path = require('path');
 

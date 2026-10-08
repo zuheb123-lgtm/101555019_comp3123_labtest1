@@ -1,15 +1,14 @@
 // Question 1: ES6 Features
-// Filters out non-strings and lowercases the remaining words, using a Promise
 
 const lowerCaseWords = (mixedArray) => {
   return new Promise((resolve, reject) => {
-    // Reject if the input is not an array
+    // if input isnt an array, dont accept it
     if (!Array.isArray(mixedArray)) {
       reject(new Error("Input must be an array"));
       return;
     }
 
-    // Keep only strings, then lowercase them
+    // onlu strings, then lowercase
     const words = mixedArray
       .filter((item) => typeof item === "string")
       .map((word) => word.toLowerCase());
@@ -25,7 +24,7 @@ lowerCaseWords(mixedArray)
   .then((result) => console.log(result))
   .catch((error) => console.error(error.message));
 
-// Rejected case (shows the promise can also be rejected)
+// Rejected case 
 lowerCaseWords("not an array")
   .then((result) => console.log(result))
   .catch((error) => console.error(error.message));
